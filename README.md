@@ -1,0 +1,1 @@
+# graphql-client-fe-base
