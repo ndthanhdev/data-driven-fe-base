@@ -1,0 +1,4 @@
+{
+	"public": "./pkgs/app/dist",
+	"rewrites": [{ "source": "**", "destination": "/index.html" }]
+}

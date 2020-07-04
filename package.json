@@ -1,0 +1,37 @@
+{
+	"name": "graphql-client-fe-base",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "git@github.com:ndthanhdev/graphql-client-fe-base.git",
+	"author": "ndthanhdev <ndthanhdev@outlook.com>",
+	"license": "MIT",
+	"workspaces": [
+		"pkgs/*"
+	],
+	"scripts": {
+		"_dev:app:serve": "serve -p 8080 -c ./etc/serve/serve.json",
+		"_dev:app:rollup": "rollup --watch -c ./etc/rollupConfs/app.dev.js",
+		"dev:app": "run-p \"_dev:app:*\""
+	},
+	"devDependencies": {
+		"@rollup/plugin-commonjs": "^13.0.0",
+		"@rollup/plugin-node-resolve": "^8.1.0",
+		"@rollup/plugin-sucrase": "^3.0.2",
+		"@types/react": "^16.9.41",
+		"@types/react-dom": "^16.9.8",
+		"@yarnpkg/pnpify": "^2.0.0-rc.25",
+		"npm-run-all": "^4.1.5",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"rollup": "^2.18.1",
+		"rollup-plugin-generate-html-template": "^1.7.0",
+		"rollup-plugin-node-globals": "^1.4.0",
+		"serve": "^11.3.2",
+		"typescript": "^3.9.5"
+	},
+	"dependenciesMeta": {
+		"@material-ui/core": {
+			"unplugged": true
+		}
+	}
+}

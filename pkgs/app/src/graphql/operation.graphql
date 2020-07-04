@@ -1,0 +1,10 @@
+query allNationsPage {
+	countries: Country {
+		_id
+		name
+		capital
+		flag {
+			svgFile
+		}
+	}
+}

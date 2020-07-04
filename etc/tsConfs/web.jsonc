@@ -1,0 +1,7 @@
+{
+	"extends": "./base.jsonc",
+	"compilerOptions": {
+		"lib": ["DOM", "ESNext"],
+		"jsx": "react"
+	}
+}
