@@ -1,0 +1,25 @@
+schema: ./pkgs/app/src/graphql/schema.graphql
+documents:
+  - ./pkgs/app/src/**/*.graphql
+generates:
+  pkgs/app/src/graphql/operations.generated.tsx:
+    config:
+      withHooks: true
+      withComponent: false
+      withHOC: false
+      maybeValue: T
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+
+  # At this time near-operation-file and yarn2 don't work together. Known issues is:
+  # Unable to load preset matching 'near-operation-file'.
+  # pkgs/app/src/:
+  #   preset: near-operation-file
+  #   presetConfig:
+  #     extension: .generated.tsx
+  #     baseTypesPath: types.generated.tsx
+  #   plugins:
+  #     - typescript-operations
+  #     - typescript-react-apollo

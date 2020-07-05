@@ -1,10 +1,10 @@
 query fetchRegionsPage {
 	regions: Region {
-    _id
-    name
-    subregions {
-      _id
-      name
-    }
-  }
+		_id
+		name
+		subregions {
+			_id
+			name
+		}
+	}
 }

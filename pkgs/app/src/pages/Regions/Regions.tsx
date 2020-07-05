@@ -1,6 +1,7 @@
 import * as React from 'react'
 import * as Mui from '@material-ui/core'
-import { useFetchRegionsPageQuery } from './operations'
+import { useFetchRegionsPageQuery } from '../../graphql'
+import gql from 'graphql-tag'
 
 type Region = {
 	_id: string
@@ -10,6 +11,19 @@ type Region = {
 		name: string
 	}[]
 }
+
+gql`
+	query fetchRegionsPage {
+		regions: Region {
+			_id
+			name
+			subregions {
+				_id
+				name
+			}
+		}
+	}
+`
 
 const Region: React.FC<Region> = (props) => {
 	return (

@@ -1,5 +1,5 @@
 # Data Driven FE Base
-A boilerplate for data driven front project
+A data driven front end project boilerplate
 
 # Tech stack
 - React
@@ -26,8 +26,9 @@ Skeleton for pages and navigation
     - [ ] Bundle dev
     - [ ] Generate graphql operations
   - [ ] Build script
-- [ ] I18N
 - [x] Routing
-- [x] Data driven
+- [ ] Local state
 - [ ] Query caching
+- [ ] I18N
+- [ ] Load more
 - [ ] Share UI Component

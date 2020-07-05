@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as Mui from '@material-ui/core'
 import { CountryTile } from '../../widgets/CountryTile'
-import { useAllNationsPageQuery } from './graphql'
+import { useAllNationsPageQuery } from '../../graphql'
 
 export const AllNationsPage: React.FC = () => {
 	const { loading, error, data } = useAllNationsPageQuery()

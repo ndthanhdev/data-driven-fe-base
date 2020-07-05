@@ -18,9 +18,12 @@ export const Item: React.FC<Item> = (props) => {
 export const HeaderBar: React.FC = () => {
 	return (
 		<>
-			<Item name="All Nations" link="/all-nations" />
-			<Item name="Regions" link="/regions" />
-			<Item name="Time Zones" link="/time-zones" />
+			<Item name="My Repos" link="/my-repos" />
+			<Item name="Stared" link="/stared" />
+			<Mui.Box flexGrow="1" />
+			<Mui.Typography color="textPrimary">Hello, Dev</Mui.Typography>
+			<Item name="Sign out" link="/time-zones" />
+			<Item name="Authorize" link="/time-zones" />
 		</>
 	)
 }

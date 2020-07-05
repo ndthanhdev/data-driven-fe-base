@@ -1,0 +1,19 @@
+query fetchMyRepos {
+  viewer {
+    repositories(first: 10, orderBy: {field: UPDATED_AT, direction: DESC}) {
+      nodes {
+        id
+        name
+        primaryLanguage {
+          name
+          color
+        }
+        forkCount
+        licenseInfo {
+          name
+        }
+        updatedAt
+      }
+    }
+  }
+}

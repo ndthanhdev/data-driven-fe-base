@@ -1,9 +1,19 @@
+import React from 'react'
 import ApolloClient from 'apollo-boost'
 import { ApolloProvider as AP } from '@apollo/react-hooks'
-import React from 'react'
+import { InMemoryCache } from 'apollo-cache-inmemory'
+import { getAuthorization } from '../services/authorize'
 
 const client = new ApolloClient({
-	uri: 'https://countries-274616.ew.r.appspot.com/',
+	uri: 'https://api.github.com/graphql',
+	cache: new InMemoryCache(),
+	request: (operation) => {
+		operation.setContext({
+			headers: {
+				authorization: getAuthorization(),
+			},
+		})
+	},
 })
 
 export const ApolloProvider: React.FC = (props) => {
