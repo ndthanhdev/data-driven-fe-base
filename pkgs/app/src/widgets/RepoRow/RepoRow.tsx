@@ -43,11 +43,9 @@ export const RepoRow: React.FC<RepoRow> = (props: RepoRow) => {
 						<Mui.Typography>{props.primaryLanguage.name}</Mui.Typography>
 					</Mui.Box>
 				)}
-				{props.forkCount && (
-					<Mui.Box pr="1rem">
-						<Mui.Typography>{props.forkCount} kj</Mui.Typography>
-					</Mui.Box>
-				)}
+				<Mui.Box pr="1rem">
+					<Mui.Typography>{String(props.forkCount)} kj</Mui.Typography>
+				</Mui.Box>
 				<Mui.Box pr="1rem">
 					<Mui.Typography>{props.licenseInfo?.name}</Mui.Typography>
 				</Mui.Box>
