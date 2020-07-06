@@ -9,11 +9,11 @@
 		"pkgs/*"
 	],
 	"scripts": {
-		"_dev:old:app:serve": "serve -p 8080 -c ./etc/serve/serve.json",
-		"_dev:app:rollup": "rollup --watch -c ./etc/rollupConfs/app.dev.js",
-		"dev:app": "run-p \"_dev:app:*\"",
-		"dev:oauth": "nodemon --delay 1 -e ts --watch ./pkgs/oauth/src --exec \"yarn ts-node ./pkgs/oauth/src/main.ts\"",
-		"dev": "run-p \"dev:*\""
+		"dev:app": "rollup --watch -c ./etc/rollupConfs/app.dev.js",
+		"dev:oauth": "cross-env NODE_ENV=dev nodemon --delay 1 -e ts --watch ./pkgs/oauth/src --exec \"yarn ts-node ./pkgs/oauth/src/main.ts\"",
+		"dev": "run-p \"dev:*\"",
+		"build": "rollup -c ./etc/rollupConfs/app.dev.js",
+		"start": "ts-node ./pkgs/oauth/src/main.ts"
 	},
 	"devDependencies": {
 		"@graphql-codegen/cli": "^1.16.0",
@@ -27,6 +27,7 @@
 		"@types/react": "^16.9.41",
 		"@types/react-dom": "^16.9.8",
 		"@yarnpkg/pnpify": "^2.0.0-rc.25",
+		"cross-env": "^7.0.2",
 		"graphql": "^15.2.0",
 		"nodemon": "^2.0.4",
 		"npm-run-all": "^4.1.5",

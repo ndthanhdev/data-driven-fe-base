@@ -1132,6 +1132,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:6.0.0"
       ],
       [
+        "cross-env",
+        "npm:7.0.2"
+      ],
+      [
         "cross-fetch",
         "npm:3.0.5"
       ],
@@ -3306,6 +3310,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:16.9.41"],
             ["@types/react-dom", "npm:16.9.8"],
             ["@yarnpkg/pnpify", "virtual:ed5dfe0ffde98ffc2cfea35125ed88fe24fb1da958edb7c0c3846d5005e84d6e09382bd7188d223b9315971100bbcbca4b211cf4635a9fd4a7e2f4ec1c6d9b9f#npm:2.0.0-rc.25"],
+            ["cross-env", "npm:7.0.2"],
             ["graphql", "npm:15.2.0"],
             ["nodemon", "npm:2.0.4"],
             ["npm-run-all", "npm:4.1.5"],
@@ -7168,6 +7173,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["cross-env", [
+        ["npm:7.0.2", {
+          "packageLocation": "./.yarn/cache/cross-env-npm-7.0.2-1e9c9fdbca-624d638db3.zip/node_modules/cross-env/",
+          "packageDependencies": [
+            ["cross-env", "npm:7.0.2"],
+            ["cross-spawn", "npm:7.0.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["cross-fetch", [
         ["npm:2.2.2", {
           "packageLocation": "./.yarn/cache/cross-fetch-npm-2.2.2-a24640f064-d72c64854c.zip/node_modules/cross-fetch/",
@@ -8562,6 +8577,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:16.9.41"],
             ["@types/react-dom", "npm:16.9.8"],
             ["@yarnpkg/pnpify", "virtual:ed5dfe0ffde98ffc2cfea35125ed88fe24fb1da958edb7c0c3846d5005e84d6e09382bd7188d223b9315971100bbcbca4b211cf4635a9fd4a7e2f4ec1c6d9b9f#npm:2.0.0-rc.25"],
+            ["cross-env", "npm:7.0.2"],
             ["graphql", "npm:15.2.0"],
             ["nodemon", "npm:2.0.4"],
             ["npm-run-all", "npm:4.1.5"],
