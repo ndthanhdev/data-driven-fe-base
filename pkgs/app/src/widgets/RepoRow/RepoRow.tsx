@@ -33,16 +33,29 @@ export const RepoRow: React.FC<RepoRow> = (props: RepoRow) => {
 	}, [props.updateAt])
 
 	return (
-		<Mui.Box display="block" width="20rem" height="15rem" margin="2rem">
-			<Mui.Typography variant="h3">{props?.name}</Mui.Typography>
-			<Mui.Box>
+		<Mui.Box display="block" width="100%" mt="2rem">
+			<Mui.Link variant="h4" href="/">
+				{props?.name}
+			</Mui.Link>
+			<Mui.Box display="flex" flexWrap="no-wrap" my="2rem">
 				{props.primaryLanguage && (
-					<Mui.Typography>{props.primaryLanguage.name}</Mui.Typography>
+					<Mui.Box pr="1rem">
+						<Mui.Typography>{props.primaryLanguage.name}</Mui.Typography>
+					</Mui.Box>
 				)}
-				{props.forkCount ?? <Mui.Typography>{props.forkCount}</Mui.Typography>}
-				<Mui.Typography>{props.licenseInfo?.name}</Mui.Typography>
-				<Mui.Typography>{lastUpdate}</Mui.Typography>
+				{props.forkCount && (
+					<Mui.Box pr="1rem">
+						<Mui.Typography>{props.forkCount} kj</Mui.Typography>
+					</Mui.Box>
+				)}
+				<Mui.Box pr="1rem">
+					<Mui.Typography>{props.licenseInfo?.name}</Mui.Typography>
+				</Mui.Box>
+				<Mui.Box pr="1rem">
+					<Mui.Typography>{lastUpdate}</Mui.Typography>
+				</Mui.Box>
 			</Mui.Box>
+			<Mui.Divider light={false} />
 		</Mui.Box>
 	)
 }

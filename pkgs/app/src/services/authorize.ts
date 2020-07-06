@@ -30,6 +30,6 @@ export const generateToken = async (code: string, from?: string) => {
 }
 
 export const getAuthorizeLink = (from?: string) =>
-	`https://github.com/login/oauth/authorize?client_id=${ClientId}&redirect_uri=http://localhost:8080/authorize?from=${
+	`https://github.com/login/oauth/authorize?client_id=${ClientId}&redirect_uri=http://localhost:3000/authorize?from=${
 		from ?? ''
 	}`

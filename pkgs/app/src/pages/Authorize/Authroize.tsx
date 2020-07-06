@@ -7,7 +7,7 @@ function useQuery() {
 	return new URLSearchParams(ReactRouter.useLocation().search)
 }
 
-type AuthorizePage = ReactRouter.RouteChildrenProps & {}
+type AuthorizePage = {}
 
 export const AuthorizePage: React.FC<AuthorizePage> = (props) => {
 	const history = ReactRouter.useHistory()

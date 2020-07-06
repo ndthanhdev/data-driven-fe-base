@@ -9,9 +9,11 @@
 		"pkgs/*"
 	],
 	"scripts": {
-		"_dev:app:serve": "serve -p 8080 -c ./etc/serve/serve.json",
+		"_dev:old:app:serve": "serve -p 8080 -c ./etc/serve/serve.json",
 		"_dev:app:rollup": "rollup --watch -c ./etc/rollupConfs/app.dev.js",
-		"dev:app": "run-p \"_dev:app:*\""
+		"dev:app": "run-p \"_dev:app:*\"",
+		"dev:oauth": "nodemon --delay 1 -e ts --watch ./pkgs/oauth/src --exec \"yarn ts-node ./pkgs/oauth/src/main.ts\"",
+		"dev": "run-p \"dev:*\""
 	},
 	"devDependencies": {
 		"@graphql-codegen/cli": "^1.16.0",
@@ -26,6 +28,7 @@
 		"@types/react-dom": "^16.9.8",
 		"@yarnpkg/pnpify": "^2.0.0-rc.25",
 		"graphql": "^15.2.0",
+		"nodemon": "^2.0.4",
 		"npm-run-all": "^4.1.5",
 		"prettier": "^2.0.5",
 		"react": "^16.13.1",
@@ -34,6 +37,7 @@
 		"rollup-plugin-generate-html-template": "^1.7.0",
 		"rollup-plugin-node-globals": "^1.4.0",
 		"serve": "^11.3.2",
+		"ts-node": "^8.10.2",
 		"typescript": "^3.9.5"
 	},
 	"dependenciesMeta": {
