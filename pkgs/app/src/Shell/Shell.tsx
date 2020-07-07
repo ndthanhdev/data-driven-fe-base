@@ -5,29 +5,32 @@ import { PagesSwitch } from './PagesSwitch'
 import { HeaderBar } from '../widgets/HeaderBar'
 import { Footer } from '../widgets/Footer'
 import { BrowserRouter } from 'react-router-dom'
+import * as Recoil from 'recoil'
 
 const Theme = Mui.createMuiTheme({
 	palette: {
-		type: 'light',
 		primary: {
 			main: '#263238',
 		},
+
 		secondary: {
-			main: '#00e676',
+			main: '#00c853',
 		},
 	},
 })
 
 export const Shell: React.FC = () => {
 	return (
-		<Mui.ThemeProvider theme={Theme}>
-			<BrowserRouter>
-				<UiComps.VerticalLayout
-					header={<HeaderBar />}
-					content={<PagesSwitch />}
-					footer={<Footer />}
-				/>
-			</BrowserRouter>
-		</Mui.ThemeProvider>
+		<Recoil.RecoilRoot>
+			<Mui.ThemeProvider theme={Theme}>
+				<BrowserRouter>
+					<UiComps.VerticalLayout
+						header={<HeaderBar />}
+						content={<PagesSwitch />}
+						footer={<Footer />}
+					/>
+				</BrowserRouter>
+			</Mui.ThemeProvider>
+		</Recoil.RecoilRoot>
 	)
 }

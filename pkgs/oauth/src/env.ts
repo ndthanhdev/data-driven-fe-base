@@ -7,5 +7,7 @@ if (process.env.NODE_ENV === 'dev') {
 	})
 }
 
+export const Origin = String(process.env.ORIGIN)
+
 export const ClientId = String(process.env.CLIENT_ID)
 export const ClientSecret = String(process.env.CLIENT_SECRET)

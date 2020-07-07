@@ -29,7 +29,7 @@ export const RepoRow: React.FC<RepoRow> = (props: RepoRow) => {
 	const classes = useClasses()
 
 	const lastUpdate = React.useMemo(() => {
-		return Luxon.DateTime.fromISO(props.updateAt).diffNow().toString()
+		return Luxon.DateTime.fromISO(props.updateAt).toRelative()
 	}, [props.updateAt])
 
 	return (

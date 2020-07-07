@@ -9,6 +9,7 @@
 		"pkgs/*"
 	],
 	"scripts": {
+		"gen:app": "graphql-codegen --c ./etc/graphql-codegen/App.yml ./pkgs/app",
 		"dev:app": "rollup --watch -c ./etc/rollupConfs/app.dev.js",
 		"dev:oauth": "cross-env NODE_ENV=dev nodemon --delay 1 -e ts --watch ./pkgs/oauth/src --exec \"yarn ts-node ./pkgs/oauth/src/main.ts\"",
 		"dev": "run-p \"dev:*\"",

@@ -1,36 +1,18 @@
 import * as React from 'react'
 import * as Mui from '@material-ui/core'
 import * as ReactRouter from 'react-router-dom'
-import * as Authorize from '../../services/authorize'
-
-function useQuery() {
-	return new URLSearchParams(ReactRouter.useLocation().search)
-}
+import * as AuthAtom from '../../atoms/Auth'
 
 type AuthorizePage = {}
 
-export const AuthorizePage: React.FC<AuthorizePage> = (props) => {
-	const history = ReactRouter.useHistory()
-	const originSearch = React.useRef(new URLSearchParams(window.location.search))
-	const from = String(originSearch.current.get('from') ?? '/')
+export const AuthorizePage: React.FC<AuthorizePage> = () => {
+	AuthAtom.useTryAuthorize()
 
-	React.useEffect(() => {
-		const code = originSearch.current.get('code')
-		if (code) {
-			;(async () => {
-				await Authorize.generateToken(code)
-				history.replace(from ?? '/')
-			})()
-		}
-	}, [])
+	const link = AuthAtom.useAuthorizeLink()
 
 	return (
 		<>
-			<Mui.Button
-				size="large"
-				color="primary"
-				href={Authorize.getAuthorizeLink(from)}
-			>
+			<Mui.Button size="large" color="primary" href={link}>
 				Authorize
 			</Mui.Button>
 		</>

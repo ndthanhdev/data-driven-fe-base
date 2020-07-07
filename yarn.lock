@@ -2271,6 +2271,7 @@ __metadata:
     react: ^16.13.1
     react-dom: ^16.13.1
     react-router-dom: ^5.2.0
+    recoil: ^0.0.10
     typescript: ^3.9.5
   languageName: unknown
   linkType: soft
@@ -2347,6 +2348,13 @@ __metadata:
   version: 2.1.0
   resolution: "array-union@npm:2.1.0"
   checksum: 93af542eb854bf62a742192d0061c82788a963a9a6594628f367388f2b9f1bfd9215910febbbdd55074841555d8b59bda6a13ecba4a8e136f58b675499eda292
+  languageName: node
+  linkType: hard
+
+"array-uniq@npm:1.0.2":
+  version: 1.0.2
+  resolution: "array-uniq@npm:1.0.2"
+  checksum: 2b7ad4e3acf54eb4f31229cfe7b9c1f99b0bbe241b8a0ee1e7949bc560daec89655891190e5c7607a503177ac6414c9695636292a292cbe1ebd1bc2fc55ad897
   languageName: node
   linkType: hard
 
@@ -2556,7 +2564,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bluebird@npm:^3.5.1":
+"bluebird@npm:^3.5.0, bluebird@npm:^3.5.1":
   version: 3.7.2
   resolution: "bluebird@npm:3.7.2"
   checksum: 4f2288662f3d4eadbb82d4daa4a7d7976a28fa3c7eb4102c9b4033b03e5be4574ba123ac52a7c103cde4cb7b2d2afc1dbe41817ca15a29ff21ecd258d0286047
@@ -6714,6 +6722,7 @@ fsevents@~2.1.2:
     koa-send: ^5.0.0
     koa-static-server: ^1.5.2
     nodemon: ^2.0.4
+    octonode: ^0.9.5
     ts-node: ^8.10.2
     typescript: ^3.9.6
   languageName: unknown
@@ -6778,6 +6787,18 @@ fsevents@~2.1.2:
   dependencies:
     isobject: ^3.0.1
   checksum: e22d555d3bb73c665a5baa1da7789d3a98f557d8712a9bbe34dc59d4adbce9d390245815296025de5260b18794de647401a6b2ae1ba0ab854a6710e2958291f6
+  languageName: node
+  linkType: hard
+
+"octonode@npm:^0.9.5":
+  version: 0.9.5
+  resolution: "octonode@npm:0.9.5"
+  dependencies:
+    bluebird: ^3.5.0
+    deep-extend: ^0.6.0
+    randomstring: ^1.1.5
+    request: ^2.72.0
+  checksum: 8394f9c1b2d29bf84cf9903dc97aef4b01cbfd19f3bd1747dd46c53021cb536352fc13cc2117d9a246542be019525049bc895212238cb87e3395aa386bb66665
   languageName: node
   linkType: hard
 
@@ -7387,6 +7408,17 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"randomstring@npm:^1.1.5":
+  version: 1.1.5
+  resolution: "randomstring@npm:1.1.5"
+  dependencies:
+    array-uniq: 1.0.2
+  bin:
+    randomstring: bin/randomstring
+  checksum: de32000213a998011946d15c5678c835e1300961f225e31315a95d3b94de9007118a86ced1101e5308f171a2a13c782db21d3294cffcf4b0ae46d059b32a7977
+  languageName: node
+  linkType: hard
+
 "range-parser@npm:1.2.0":
   version: 1.2.0
   resolution: "range-parser@npm:1.2.0"
@@ -7539,6 +7571,16 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"recoil@npm:^0.0.10":
+  version: 0.0.10
+  resolution: "recoil@npm:0.0.10"
+  peerDependencies:
+    react: ^16.13.1
+    react-dom: ^16.13.1
+  checksum: 204948109a1d12003bca3446ac5bc009a66087faed87bf1a51893b983648377f334f205f955e56041a86f48006001e1fb88bdbf8d0293f77746fed055cbcf89d
+  languageName: node
+  linkType: hard
+
 "regenerator-runtime@npm:^0.13.4":
   version: 0.13.5
   resolution: "regenerator-runtime@npm:0.13.5"
@@ -7673,7 +7715,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"request@npm:2.88.2, request@npm:^2.88.2":
+"request@npm:2.88.2, request@npm:^2.72.0, request@npm:^2.88.2":
   version: 2.88.2
   resolution: "request@npm:2.88.2"
   dependencies:
