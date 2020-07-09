@@ -13,6 +13,10 @@ export default {
 		sourcemap: true,
 	},
 	plugins: [
+		replace({
+			__CLIENT_ID__: () =>
+				JSON.stringify(process.env.CLIENT_ID ?? '1d4487ba605cb0e29ccb'),
+		}),
 		resolve({
 			mainFields: ['module', 'browser', 'main'],
 			extensions: ['.mjs', '.js', '.json', '.node', '.ts', '.tsx'],
@@ -23,9 +27,6 @@ export default {
 			transforms: ['typescript', 'jsx'],
 		}),
 		nodeGlobals(),
-		replace({
-			__CLIENT_ID__: () => process.env.CLIENT_ID ?? '1d4487ba605cb0e29ccb',
-		}),
 		htmlTemplate({
 			template: './etc/templates/dev.html',
 			target: './pkgs/app/dist/index.html',
