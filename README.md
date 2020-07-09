@@ -21,14 +21,11 @@ Skeleton for pages and navigation
 
 # Requirements
 - [ ] Script
-  - [ ] Dev script
-    - [x] Serve dev bundle
-    - [ ] Bundle dev
-    - [ ] Generate graphql operations
+  - [ ] Dev scripts
   - [ ] Build script
 - [x] Routing
-- [ ] Local state
+- [x] Local state management
 - [ ] Query caching
 - [ ] I18N
-- [ ] Load more
-- [ ] Share UI Component
+- [ ] Pagination & listing
+- [ ] Share UI Components

@@ -2,6 +2,8 @@ import * as React from 'react'
 import * as Mui from '@material-ui/core'
 import { Link } from 'react-router-dom'
 import * as AuthAtom from '../../atoms/Auth'
+import { useSignOut, useAuthorize } from '../../hooks/auths'
+import { Welcome } from '../Welcome'
 
 type Item = {
 	name: string
@@ -17,7 +19,7 @@ export const Item: React.FC<Item> = (props) => {
 }
 
 export const SignOut: React.FC = () => {
-	const signOut = AuthAtom.useSignOut()
+	const signOut = useSignOut()
 
 	return (
 		<Mui.Button color="inherit" onClick={signOut}>
@@ -27,7 +29,7 @@ export const SignOut: React.FC = () => {
 }
 
 export const Authorize: React.FC = () => {
-	const authorize = AuthAtom.useAuthorize()
+	const authorize = useAuthorize()
 
 	return (
 		<Mui.Button color="inherit" onClick={authorize}>
@@ -44,7 +46,7 @@ export const HeaderBar: React.FC = () => {
 			<Item name="My Repos" link="/my-repos" />
 			<Item name="Stared" link="/stared" />
 			<Mui.Box flexGrow="1" />
-			<Mui.Typography color="inherit">Hello, Dev</Mui.Typography>
+			{isAuthorized && <Welcome />}
 			{isAuthorized && <SignOut />}
 			{!isAuthorized && <Authorize />}
 		</>

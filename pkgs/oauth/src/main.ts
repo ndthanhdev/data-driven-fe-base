@@ -50,7 +50,8 @@ Router.post('/invoke-access-token', async (ctx) => {
 			},
 		},
 	)
-	console.log(res)
+	console.log(res.status)
+	ctx.status = res.status;
 })
 
 App.use(Router.routes())
