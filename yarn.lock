@@ -1321,6 +1321,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rollup/plugin-replace@npm:^2.3.3":
+  version: 2.3.3
+  resolution: "@rollup/plugin-replace@npm:2.3.3"
+  dependencies:
+    "@rollup/pluginutils": ^3.0.8
+    magic-string: ^0.25.5
+  peerDependencies:
+    rollup: ^1.20.0 || ^2.0.0
+  checksum: d08a514b8f446a3fe3db7e9de7d1a57c4aaeaaa3d6f70c2e18925d893ed81480dbfd29fe939f61c1ef31194b036ab7b1df22a744ffd33196335f9fa1925d3c22
+  languageName: node
+  linkType: hard
+
 "@rollup/plugin-sucrase@npm:^3.0.2":
   version: 3.1.0
   resolution: "@rollup/plugin-sucrase@npm:3.1.0"
@@ -4556,6 +4568,7 @@ fsevents@~2.1.2:
     "@graphql-codegen/typescript-react-apollo": ^1.16.0
     "@rollup/plugin-commonjs": ^13.0.0
     "@rollup/plugin-node-resolve": ^8.1.0
+    "@rollup/plugin-replace": ^2.3.3
     "@rollup/plugin-sucrase": ^3.0.2
     "@types/react": ^16.9.41
     "@types/react-dom": ^16.9.8
@@ -6144,7 +6157,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"magic-string@npm:^0.25.2":
+"magic-string@npm:^0.25.2, magic-string@npm:^0.25.5":
   version: 0.25.7
   resolution: "magic-string@npm:0.25.7"
   dependencies:

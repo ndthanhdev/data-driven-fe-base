@@ -1,7 +1,7 @@
 import { default as Axios } from 'axios'
 
 const TokenKey = 'TokenKey'
-const ClientId = String(process.env.CLIENT_ID ?? '1d4487ba605cb0e29ccb')
+const ClientId = String(__CLIENT_ID__)
 const Origin = globalThis.location.origin
 const InvokeEndPoint = `${Origin}/invoke-access-token`
 const RevokeEndPoint = `${Origin}/revoke-access-token`

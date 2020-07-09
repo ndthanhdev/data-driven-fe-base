@@ -432,6 +432,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "virtual:ed5dfe0ffde98ffc2cfea35125ed88fe24fb1da958edb7c0c3846d5005e84d6e09382bd7188d223b9315971100bbcbca4b211cf4635a9fd4a7e2f4ec1c6d9b9f#npm:8.1.0"
       ],
       [
+        "@rollup/plugin-replace",
+        "virtual:ed5dfe0ffde98ffc2cfea35125ed88fe24fb1da958edb7c0c3846d5005e84d6e09382bd7188d223b9315971100bbcbca4b211cf4635a9fd4a7e2f4ec1c6d9b9f#npm:2.3.3"
+      ],
+      [
         "@rollup/plugin-sucrase",
         "virtual:ed5dfe0ffde98ffc2cfea35125ed88fe24fb1da958edb7c0c3846d5005e84d6e09382bd7188d223b9315971100bbcbca4b211cf4635a9fd4a7e2f4ec1c6d9b9f#npm:3.1.0"
       ],
@@ -3322,6 +3326,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@graphql-codegen/typescript-react-apollo", "virtual:ed5dfe0ffde98ffc2cfea35125ed88fe24fb1da958edb7c0c3846d5005e84d6e09382bd7188d223b9315971100bbcbca4b211cf4635a9fd4a7e2f4ec1c6d9b9f#npm:1.16.2"],
             ["@rollup/plugin-commonjs", "virtual:ed5dfe0ffde98ffc2cfea35125ed88fe24fb1da958edb7c0c3846d5005e84d6e09382bd7188d223b9315971100bbcbca4b211cf4635a9fd4a7e2f4ec1c6d9b9f#npm:13.0.0"],
             ["@rollup/plugin-node-resolve", "virtual:ed5dfe0ffde98ffc2cfea35125ed88fe24fb1da958edb7c0c3846d5005e84d6e09382bd7188d223b9315971100bbcbca4b211cf4635a9fd4a7e2f4ec1c6d9b9f#npm:8.1.0"],
+            ["@rollup/plugin-replace", "virtual:ed5dfe0ffde98ffc2cfea35125ed88fe24fb1da958edb7c0c3846d5005e84d6e09382bd7188d223b9315971100bbcbca4b211cf4635a9fd4a7e2f4ec1c6d9b9f#npm:2.3.3"],
             ["@rollup/plugin-sucrase", "virtual:ed5dfe0ffde98ffc2cfea35125ed88fe24fb1da958edb7c0c3846d5005e84d6e09382bd7188d223b9315971100bbcbca4b211cf4635a9fd4a7e2f4ec1c6d9b9f#npm:3.1.0"],
             ["@types/react", "npm:16.9.41"],
             ["@types/react-dom", "npm:16.9.8"],
@@ -4910,6 +4915,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["deepmerge", "npm:4.2.2"],
             ["is-module", "npm:1.0.0"],
             ["resolve", "patch:resolve@npm%3A1.17.0#builtin<compat/resolve>::version=1.17.0&hash=3388aa"],
+            ["rollup", "npm:2.19.0"]
+          ],
+          "packagePeers": [
+            "rollup"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@rollup/plugin-replace", [
+        ["virtual:ed5dfe0ffde98ffc2cfea35125ed88fe24fb1da958edb7c0c3846d5005e84d6e09382bd7188d223b9315971100bbcbca4b211cf4635a9fd4a7e2f4ec1c6d9b9f#npm:2.3.3", {
+          "packageLocation": "./.yarn/$$virtual/@rollup-plugin-replace-virtual-cac4dbc47c/0/cache/@rollup-plugin-replace-npm-2.3.3-ca49948ae3-d08a514b8f.zip/node_modules/@rollup/plugin-replace/",
+          "packageDependencies": [
+            ["@rollup/plugin-replace", "virtual:ed5dfe0ffde98ffc2cfea35125ed88fe24fb1da958edb7c0c3846d5005e84d6e09382bd7188d223b9315971100bbcbca4b211cf4635a9fd4a7e2f4ec1c6d9b9f#npm:2.3.3"],
+            ["@rollup/pluginutils", "virtual:fb875e1ac4a94e09b3468674b84e3e081d3a165209d43da1bd213c65c36cc0dcf226e96621fa177f50962bfdb06d3eb5cb6ae579298e124ebeda11be539e3446#npm:3.1.0"],
+            ["magic-string", "npm:0.25.7"],
             ["rollup", "npm:2.19.0"]
           ],
           "packagePeers": [
@@ -8599,6 +8619,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@graphql-codegen/typescript-react-apollo", "virtual:ed5dfe0ffde98ffc2cfea35125ed88fe24fb1da958edb7c0c3846d5005e84d6e09382bd7188d223b9315971100bbcbca4b211cf4635a9fd4a7e2f4ec1c6d9b9f#npm:1.16.2"],
             ["@rollup/plugin-commonjs", "virtual:ed5dfe0ffde98ffc2cfea35125ed88fe24fb1da958edb7c0c3846d5005e84d6e09382bd7188d223b9315971100bbcbca4b211cf4635a9fd4a7e2f4ec1c6d9b9f#npm:13.0.0"],
             ["@rollup/plugin-node-resolve", "virtual:ed5dfe0ffde98ffc2cfea35125ed88fe24fb1da958edb7c0c3846d5005e84d6e09382bd7188d223b9315971100bbcbca4b211cf4635a9fd4a7e2f4ec1c6d9b9f#npm:8.1.0"],
+            ["@rollup/plugin-replace", "virtual:ed5dfe0ffde98ffc2cfea35125ed88fe24fb1da958edb7c0c3846d5005e84d6e09382bd7188d223b9315971100bbcbca4b211cf4635a9fd4a7e2f4ec1c6d9b9f#npm:2.3.3"],
             ["@rollup/plugin-sucrase", "virtual:ed5dfe0ffde98ffc2cfea35125ed88fe24fb1da958edb7c0c3846d5005e84d6e09382bd7188d223b9315971100bbcbca4b211cf4635a9fd4a7e2f4ec1c6d9b9f#npm:3.1.0"],
             ["@types/react", "npm:16.9.41"],
             ["@types/react-dom", "npm:16.9.8"],
