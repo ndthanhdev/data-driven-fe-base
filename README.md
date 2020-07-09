@@ -5,6 +5,7 @@ A data driven front end project boilerplate
 - React
 - Apollo Graphql
 - Graphql code generator
+- Recoil
 
 # Structure
 > ***ui-comps***  
@@ -19,6 +20,15 @@ Widget or group of widgets that match to at least an url for navigation purpose
 > ***shell***  
 Skeleton for pages and navigation
 
+> ***hooks***  
+For sharing common react component logics
+
+> ***atoms__unstable***  
+Local state management
+
+> ***services__unstable***  
+Do interactions that cannot done via graphql
+
 # Requirements
 - [ ] Script
   - [ ] Dev scripts
@@ -28,4 +38,6 @@ Skeleton for pages and navigation
 - [ ] Query caching
 - [ ] I18N
 - [ ] Pagination & listing
-- [ ] Share UI Components
+- [ ] Layout
+  - [ ] Vertical
+  - [ ] Side left/right
