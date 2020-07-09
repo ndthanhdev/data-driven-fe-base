@@ -2,7 +2,7 @@ import * as React from 'react'
 import * as Mui from '@material-ui/core'
 import { Link } from 'react-router-dom'
 import * as AuthAtom from '../../atoms/Auth'
-import { useSignOut, useAuthorize } from '../../hooks/auths'
+import { useSignOut, useAuthorizeLink } from '../../hooks/auths'
 import { Welcome } from '../Welcome'
 
 type Item = {
@@ -29,10 +29,10 @@ export const SignOut: React.FC = () => {
 }
 
 export const Authorize: React.FC = () => {
-	const authorize = useAuthorize()
+	const authorizeLink = useAuthorizeLink()
 
 	return (
-		<Mui.Button color="inherit" onClick={authorize}>
+		<Mui.Button color="inherit" href={authorizeLink}>
 			Authorize
 		</Mui.Button>
 	)
