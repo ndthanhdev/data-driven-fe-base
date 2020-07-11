@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import * as AuthAtom from '../../atoms/Auth'
 import { useSignOut, useAuthorizeLink } from '../../hooks/auths'
 import { Welcome } from '../Welcome'
+import * as Recoil from 'recoil'
 
 type Item = {
 	name: string
@@ -39,7 +40,7 @@ export const Authorize: React.FC = () => {
 }
 
 export const HeaderBar: React.FC = () => {
-	const isAuthorized = AuthAtom.useIsAuthorized()
+	const isAuthorized = Recoil.useRecoilValue(AuthAtom.IsAuthorized)
 
 	return (
 		<>

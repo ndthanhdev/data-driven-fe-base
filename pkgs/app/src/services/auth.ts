@@ -31,10 +31,11 @@ export const generateToken = async (code: string) => {
 	return true
 }
 
+const Scopes = ['public_repo', 'gist']
 export const getAuthorizeLink = (from?: string) => {
 	return `https://github.com/login/oauth/authorize?client_id=${ClientId}&redirect_uri=${Origin}/authorize?from=${
 		from ?? '/'
-	}`
+	}&scope=${Scopes.join(' ')}`
 }
 
 export const revokeToken = async () => {

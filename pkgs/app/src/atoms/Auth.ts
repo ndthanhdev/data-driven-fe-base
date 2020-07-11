@@ -19,8 +19,4 @@ export const IsAuthorized = Recoil.selector({
 	},
 })
 
-export const useIsAuthorized = (): boolean => {
-	return Recoil.useRecoilValue(AuthState).isAuthorized
-}
-
 

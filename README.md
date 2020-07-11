@@ -35,7 +35,10 @@ Do interactions that cannot done via graphql
   - [ ] Build script
 - [x] Routing
 - [x] Local state management
-- [ ] Query caching
+- [x] Query caching
+- [ ] Storybook
+- [ ] UI Unit testing
+- [ ] connected UI testing
 - [ ] I18N
 - [ ] Pagination & listing
 - [ ] Layout
