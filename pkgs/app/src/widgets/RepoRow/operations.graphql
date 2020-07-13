@@ -1,0 +1,19 @@
+query repoRow($id: ID!) {
+  node(id: $id) {
+    __typename
+    ... on Repository {
+      id
+      name
+      primaryLanguage {
+        name
+        color
+      }
+      forkCount
+      licenseInfo {
+        name
+      }
+      updatedAt
+      viewerHasStarred
+    }
+  }
+}

@@ -42,41 +42,34 @@ function useStar(starableId: string) {
 		},
 	})
 
-	const node = React.useRef(data?.node)
-	node.current = data?.node
-
 	const [isStared, setIsStared] = React.useState(false)
 	React.useEffect(() => {
-		if (node.current?.__typename !== 'Repository') {
+		if (data?.node?.__typename !== 'Repository') {
 			setIsStared(false)
 			return
 		}
 
-		setIsStared(node.current?.viewerHasStarred)
+		setIsStared(data?.node?.viewerHasStarred)
 	}, [data])
 
-	const [addStar] = Operation.useAddStarMutation({
+	const [addStar, {}] = Operation.useAddStarMutation({
 		variables: {
 			id: starableId,
-			
 		},
-		
 	})
 
-	const [removeStar] = Operation.useRemoveStarMutation({
+	const [removeStar, {}] = Operation.useRemoveStarMutation({
 		variables: {
 			id: starableId,
 		},
 	})
 
 	const toggleStar = React.useCallback(async () => {
-		if (node.current?.__typename !== 'Repository') {
-			return
-		}
-
 		if (isStared) {
+			setIsStared(false)
 			await removeStar()
 		} else {
+			setIsStared(true)
 			await addStar()
 		}
 

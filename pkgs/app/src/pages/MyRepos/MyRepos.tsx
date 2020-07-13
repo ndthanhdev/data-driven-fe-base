@@ -22,11 +22,6 @@ export const MyReposPage: React.FC = () => {
 						<RepoRow
 							key={String(c.id)}
 							id={String(c.id)}
-							name={String(c.name)}
-							primaryLanguage={c.primaryLanguage}
-							licenseInfo={c.licenseInfo}
-							forkCount={c.forkCount}
-							updateAt={c.updatedAt}
 						/>
 				  ))}
 		</Mui.Box>

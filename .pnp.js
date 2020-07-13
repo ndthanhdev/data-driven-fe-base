@@ -396,6 +396,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "virtual:0b95dcbe585380d4e6ac9ca1355caac5cfc225cbb53ab960d16447f5793ceef425250cb036d8eb22e747c8858a343baac2be094b0965286061f550e54fc89d59#npm:4.9.1"
       ],
       [
+        "@material-ui/lab",
+        "virtual:0b95dcbe585380d4e6ac9ca1355caac5cfc225cbb53ab960d16447f5793ceef425250cb036d8eb22e747c8858a343baac2be094b0965286061f550e54fc89d59#npm:4.0.0-alpha.56"
+      ],
+      [
         "@material-ui/styles",
         "virtual:a9090aa2988cb255fc92c3eac98340b2ed21277a867971b0b3d4a5d332b50f6eec8267c3dc172f5357ae660dda8722f0ce899ae132b2688b715765866c27c2a0#npm:4.10.0"
       ],
@@ -4773,6 +4777,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@material-ui/lab", [
+        ["virtual:0b95dcbe585380d4e6ac9ca1355caac5cfc225cbb53ab960d16447f5793ceef425250cb036d8eb22e747c8858a343baac2be094b0965286061f550e54fc89d59#npm:4.0.0-alpha.56", {
+          "packageLocation": "./.yarn/$$virtual/@material-ui-lab-virtual-28dbf0da41/0/cache/@material-ui-lab-npm-4.0.0-alpha.56-dc8cf118f0-ed04d1f6c3.zip/node_modules/@material-ui/lab/",
+          "packageDependencies": [
+            ["@material-ui/lab", "virtual:0b95dcbe585380d4e6ac9ca1355caac5cfc225cbb53ab960d16447f5793ceef425250cb036d8eb22e747c8858a343baac2be094b0965286061f550e54fc89d59#npm:4.0.0-alpha.56"],
+            ["@babel/runtime", "npm:7.10.4"],
+            ["@material-ui/core", "virtual:0b95dcbe585380d4e6ac9ca1355caac5cfc225cbb53ab960d16447f5793ceef425250cb036d8eb22e747c8858a343baac2be094b0965286061f550e54fc89d59#npm:4.11.0"],
+            ["@material-ui/utils", "virtual:a9090aa2988cb255fc92c3eac98340b2ed21277a867971b0b3d4a5d332b50f6eec8267c3dc172f5357ae660dda8722f0ce899ae132b2688b715765866c27c2a0#npm:4.10.2"],
+            ["@types/react", "npm:16.9.41"],
+            ["clsx", "npm:1.1.1"],
+            ["prop-types", "npm:15.7.2"],
+            ["react", "npm:16.13.1"],
+            ["react-dom", "virtual:ed5dfe0ffde98ffc2cfea35125ed88fe24fb1da958edb7c0c3846d5005e84d6e09382bd7188d223b9315971100bbcbca4b211cf4635a9fd4a7e2f4ec1c6d9b9f#npm:16.13.1"],
+            ["react-is", "npm:16.13.1"]
+          ],
+          "packagePeers": [
+            "@material-ui/core",
+            "@types/react",
+            "react",
+            "react-dom"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@material-ui/styles", [
         ["virtual:a9090aa2988cb255fc92c3eac98340b2ed21277a867971b0b3d4a5d332b50f6eec8267c3dc172f5357ae660dda8722f0ce899ae132b2688b715765866c27c2a0#npm:4.10.0", {
           "packageLocation": "./.yarn/$$virtual/@material-ui-styles-virtual-2931d9fb30/0/cache/@material-ui-styles-npm-4.10.0-d754c19060-928821cb46.zip/node_modules/@material-ui/styles/",
@@ -6068,6 +6096,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@graphql-codegen/typescript-react-apollo", "virtual:0b95dcbe585380d4e6ac9ca1355caac5cfc225cbb53ab960d16447f5793ceef425250cb036d8eb22e747c8858a343baac2be094b0965286061f550e54fc89d59#npm:1.16.2"],
             ["@material-ui/core", "virtual:0b95dcbe585380d4e6ac9ca1355caac5cfc225cbb53ab960d16447f5793ceef425250cb036d8eb22e747c8858a343baac2be094b0965286061f550e54fc89d59#npm:4.11.0"],
             ["@material-ui/icons", "virtual:0b95dcbe585380d4e6ac9ca1355caac5cfc225cbb53ab960d16447f5793ceef425250cb036d8eb22e747c8858a343baac2be094b0965286061f550e54fc89d59#npm:4.9.1"],
+            ["@material-ui/lab", "virtual:0b95dcbe585380d4e6ac9ca1355caac5cfc225cbb53ab960d16447f5793ceef425250cb036d8eb22e747c8858a343baac2be094b0965286061f550e54fc89d59#npm:4.0.0-alpha.56"],
             ["@types/luxon", "npm:1.24.1"],
             ["@types/react", "npm:16.9.41"],
             ["@types/react-dom", "npm:16.9.8"],
