@@ -1,9 +1,19 @@
-query fetchMyRepos {
-  viewer {
-    repositories(first: 10, orderBy: {field: UPDATED_AT, direction: DESC}) {
-      nodes {
-        id
-      }
-    }
-  }
+query fetchMyRepos($before: String, $after: String) {
+	viewer {
+		repositories(
+			first: 10
+			before: $before
+			after: $after
+			orderBy: { field: UPDATED_AT, direction: DESC }
+		) {
+			pageInfo {
+				endCursor
+				startCursor
+			}
+			nodes {
+				id
+				name
+			}
+		}
+	}
 }

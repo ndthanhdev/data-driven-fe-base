@@ -22,10 +22,11 @@
 		"@graphql-codegen/typescript": "^1.16.0",
 		"@graphql-codegen/typescript-operations": "^1.16.0",
 		"@graphql-codegen/typescript-react-apollo": "^1.16.0",
+		"@rollup/plugin-babel": "^5.1.0",
 		"@rollup/plugin-commonjs": "^13.0.0",
 		"@rollup/plugin-node-resolve": "^8.1.0",
 		"@rollup/plugin-replace": "^2.3.3",
-		"@rollup/plugin-sucrase": "^3.0.2",
+		"@rollup/plugin-sucrase": "^3.1.0",
 		"@types/react": "^16.9.41",
 		"@types/react-dom": "^16.9.8",
 		"@yarnpkg/pnpify": "^2.0.0-rc.25",
@@ -45,6 +46,9 @@
 	},
 	"dependenciesMeta": {
 		"@material-ui/core": {
+			"unplugged": true
+		},
+		"ramda": {
 			"unplugged": true
 		}
 	}

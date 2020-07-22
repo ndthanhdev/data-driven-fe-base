@@ -4,6 +4,7 @@ import htmlTemplate from 'rollup-plugin-generate-html-template'
 import sucrase from '@rollup/plugin-sucrase'
 import nodeGlobals from 'rollup-plugin-node-globals'
 import replace from '@rollup/plugin-replace'
+import babel from '@rollup/plugin-babel'
 
 export default {
 	input: './pkgs/app/src/index.tsx',
@@ -21,11 +22,11 @@ export default {
 			mainFields: ['module', 'browser', 'main'],
 			extensions: ['.mjs', '.js', '.json', '.node', '.ts', '.tsx'],
 		}),
-		commonjs(),
 		sucrase({
-			exclude: ['node_modules/**'],
+			include: ['**/src/**', 'node_modules/ramda/es/**/*'],
 			transforms: ['typescript', 'jsx'],
 		}),
+		commonjs(),
 		nodeGlobals(),
 		htmlTemplate({
 			template: './etc/templates/dev.html',
