@@ -9,6 +9,7 @@ import * as MuiLab from '@material-ui/lab'
 
 export type RepoRow = {
 	id: string
+	style: any
 }
 
 const useClasses = Mui.makeStyles({
@@ -55,7 +56,7 @@ export const RepoRowSkeleton: React.FC = () => {
 				</Mui.Box>
 				<Mui.Box display="flex" alignItems="start" flexGrow="0" pt="0.5rem">
 					<Mui.Button>
-						<MuiLab.Skeleton width="5rem" height="3rem"/>
+						<MuiLab.Skeleton width="5rem" height="3rem" />
 					</Mui.Button>
 				</Mui.Box>
 			</Mui.Box>
@@ -68,7 +69,7 @@ export const RepoRowSkeleton: React.FC = () => {
 
 export const RepoRow: React.FC<RepoRow> = (props: RepoRow) => {
 	const classes = useClasses()
-	const { id } = props
+	const { id, style } = props
 
 	const { data } = Operations.useRepoRowQuery({
 		variables: {
@@ -99,7 +100,7 @@ export const RepoRow: React.FC<RepoRow> = (props: RepoRow) => {
 	)
 
 	return (
-		<Mui.Box display="block" width="100%" mt="2rem" mb="1rem">
+		<Mui.Box display="block" width="100%" mt="2rem" mb="1rem" style={style}>
 			<Mui.Box
 				display="flex"
 				flexWrap="no-wrap"

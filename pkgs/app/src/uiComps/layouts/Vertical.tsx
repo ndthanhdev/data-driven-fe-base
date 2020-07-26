@@ -39,15 +39,13 @@ export const VerticalLayout: React.FC<VerticalLayout> = (props) => {
 		<Mui.Box width="100%">
 			<HideOnScroll {...props}>
 				<Mui.AppBar>
-					<Mui.Toolbar>
-						{props.header ?? 'Scroll to Hide App Bar'}
-					</Mui.Toolbar>
+					<Mui.Toolbar>{props.header ?? 'Scroll to Hide App Bar'}</Mui.Toolbar>
 				</Mui.AppBar>
 			</HideOnScroll>
 			<Mui.Toolbar />
 			<Mui.Container maxWidth="lg">{props.content ?? ''}</Mui.Container>
 			<Mui.Divider />
-			<Mui.Box width="100%">{props.footer ?? 'Make with ♥'}</Mui.Box>
+			<Mui.Box width="100%">{props.footer}</Mui.Box>
 		</Mui.Box>
 	)
 }

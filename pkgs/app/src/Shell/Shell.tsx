@@ -27,7 +27,7 @@ export const Shell: React.FC = () => {
 					<UiComps.VerticalLayout
 						header={<HeaderBar />}
 						content={<PagesSwitch />}
-						footer={<Footer />}
+						// footer={<Footer />}
 					/>
 				</BrowserRouter>
 			</Mui.ThemeProvider>

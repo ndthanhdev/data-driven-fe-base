@@ -5,6 +5,8 @@ import * as Operations from '../../graphql'
 import { GraphqlError } from '../../widgets/GraphqlError'
 import produce from 'immer'
 import * as R from 'ramda'
+import { FixedSizeList } from 'react-window'
+import AutoSizer from 'react-virtualized-auto-sizer'
 
 export const Skeleton: React.FC = () => {
 	return (
@@ -15,6 +17,17 @@ export const Skeleton: React.FC = () => {
 			<RepoRowSkeleton />
 		</>
 	)
+}
+
+type RowProps = {
+	data: string[]
+
+	index: number
+	style: any
+}
+const RowRenderer: React.FC<RowProps> = ({ data, index, style }) => {
+	const id = data[index]
+	return <RepoRow key={id} id={id} style={style} />
 }
 
 export const MyReposPage: React.FC = () => {
@@ -57,13 +70,11 @@ export const MyReposPage: React.FC = () => {
 
 	let nodes = data?.viewer?.repositories?.nodes?.filter((c) => c)
 
-	const rows = nodes?.map((r) => (
-		<RepoRow key={String(r.id)} id={String(r.id)} />
-	))
+	const rows: string[] = nodes?.map((r) => String(r.id)) ?? []
 
-	if (loading) {
-		rows?.push(<Skeleton key="ske" />)
-	}
+	// if (loading) {
+	// 	rows?.push(<Skeleton key="ske" />)
+	// }
 
 	if (error) {
 		return <GraphqlError error={error} />
@@ -71,7 +82,19 @@ export const MyReposPage: React.FC = () => {
 
 	return (
 		<Mui.Box display="flex" flexWrap="wrap">
-			{rows}
+			<AutoSizer disableHeight>
+				{({ width }) => (
+					<FixedSizeList
+						width={width}
+						height={1000}
+						itemSize={180}
+						itemData={rows}
+						itemCount={rows.length}
+					>
+						{RowRenderer}
+					</FixedSizeList>
+				)}
+			</AutoSizer>
 		</Mui.Box>
 	)
 }
